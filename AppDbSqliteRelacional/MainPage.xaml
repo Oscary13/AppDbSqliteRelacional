@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDbSqliteRelacional.MainPage">
+
+    <ScrollView>
+        <AbsoluteLayout>
+
+            <Grid 
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3" 
+                AbsoluteLayout.LayoutFlags="All">
+                <Border
+
+                    HeightRequest="230"
+                    WidthRequest="400">
+                    <Border.StrokeShape>
+                        <Rectangle/>
+                    </Border.StrokeShape>
+                    <Image Source="pelis.png"/>
+                </Border>
+            </Grid>
+
+            <Label Text="INGRESA UNA CATEGORÍA DE PELÍCULA" 
+                   AbsoluteLayout.LayoutBounds="0.5, 0.4, 300, 70" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional"  
+                   FontSize="24"
+                   TextColor="Purple"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+
+            <Border 
+                AbsoluteLayout.LayoutBounds="0.5, 0.5, 300, 40" 
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Entry
+                    x:Name="CategoriaTxt"
+                    Placeholder="Categoría de la pelicula" 
+                    Margin="10,0" 
+                    ClearButtonVisibility="WhileEditing"/>
+            </Border>
+
+            <Button 
+                x:Name="GuardarCategoria"
+                AbsoluteLayout.LayoutBounds="0, 400, 250, 40"
+                Text="Guardar categoría" 
+                CornerRadius="100" 
+                WidthRequest="150"
+                VerticalOptions="Start"
+                Clicked="GuardarCategoria_Clicked"/>
+            
+            <Button 
+                x:Name="peliculas"
+                AbsoluteLayout.LayoutBounds="0, 400, 350, 40"
+                Text="Agregar pelicula" 
+                CornerRadius="100" 
+                WidthRequest="135"
+                HorizontalOptions="End"
+                BackgroundColor="Red"
+                Clicked="peliculas_Clicked"/>
+
+            <Label Text="Categorias disponibles:" 
+                   AbsoluteLayout.LayoutBounds="0.5, 0.7, 300, 70" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional"  
+                   FontSize="20"
+                   TextColor="Purple"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"/>
+
+            <ListView 
+                AbsoluteLayout.LayoutBounds="0.5, .92, 300, 150"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                x:Name="CategoriaListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nombre}" />
+
+                                <!-- Agrega más elementos aquí según tus necesidades -->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+         
+
+
+
+
+
+
+
+
+
+
+        </AbsoluteLayout>
+    </ScrollView>
+
+
+</ContentPage>

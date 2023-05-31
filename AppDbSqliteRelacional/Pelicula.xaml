@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDbSqliteRelacional.Pelicula"
+             Title="Pelicula">
+    <ScrollView>
+        <AbsoluteLayout>
+
+            <Grid 
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3" 
+                AbsoluteLayout.LayoutFlags="All">
+                <Border
+
+                    HeightRequest="230"
+                    WidthRequest="400">
+                    <Border.StrokeShape>
+                        <Rectangle/>
+                    </Border.StrokeShape>
+                    <Image Source="pelis.png"/>
+                </Border>
+            </Grid>
+
+            <Label Text="INGRESA UNA PELÍCULA" 
+                   AbsoluteLayout.LayoutBounds="0.5, 0.4, 300, 70" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional"  
+                   FontSize="24"
+                   TextColor="Red"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+            <Border 
+                AbsoluteLayout.LayoutBounds="0.5, 0.5, 300, 40" 
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Entry
+                    x:Name="PeliculaTxt"
+                    Placeholder="Nombre de la pelicula" 
+                    Margin="10,0" 
+                    ClearButtonVisibility="WhileEditing"/>
+            </Border>
+
+            <Border 
+                AbsoluteLayout.LayoutBounds="0.5, 0.58, 300, 40" 
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Entry
+                    x:Name="DuracionTxt"
+                    Placeholder="Duración de la pelicula" 
+                    Margin="10,0" 
+                    ClearButtonVisibility="WhileEditing"/>
+            </Border>
+
+            <Picker 
+                x:Name="pckCategorias"
+                Title="Selecciona una categoriía"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                AbsoluteLayout.LayoutBounds="120, 460, 170, 50"
+                TextColor="Red"
+                FontSize="24"
+                />
+
+            <Button 
+                x:Name="GuardarPelicula"
+                AbsoluteLayout.LayoutBounds="0, 550, 400, 40"
+                Text="Guardar pelicula" 
+                CornerRadius="100" 
+                WidthRequest="300"
+                VerticalOptions="Start"
+                Clicked="GuardarPelicula_Clicked"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </AbsoluteLayout>
+    </ScrollView>
+</ContentPage>
