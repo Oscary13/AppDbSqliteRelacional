@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppDbSqliteRelacional.MainPage">
+             x:Class="AppDbSqliteRelacional.MainPage"
+             Shell.NavBarIsVisible="False">
 
     <ScrollView>
         <AbsoluteLayout>
@@ -21,8 +22,7 @@
             </Grid>
 
             <Label Text="INGRESA UNA CATEGORÍA DE PELÍCULA" 
-                   AbsoluteLayout.LayoutBounds="0.5, 0.4, 300, 70" 
-                   AbsoluteLayout.LayoutFlags="PositionProportional"  
+                   AbsoluteLayout.LayoutBounds="50, 270, 300, 70" 
                    FontSize="24"
                    TextColor="Purple"
                    FontAttributes="Bold"
@@ -31,8 +31,7 @@
 
 
             <Border 
-                AbsoluteLayout.LayoutBounds="0.5, 0.5, 300, 40" 
-                AbsoluteLayout.LayoutFlags="PositionProportional">
+                AbsoluteLayout.LayoutBounds="50, 370, 300, 40">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="50, 50, 50, 50" />
                 </Border.StrokeShape>
@@ -46,7 +45,7 @@
 
             <Button 
                 x:Name="GuardarCategoria"
-                AbsoluteLayout.LayoutBounds="0, 400, 250, 40"
+                AbsoluteLayout.LayoutBounds="0, 450, 250, 40"
                 Text="Guardar categoría" 
                 CornerRadius="100" 
                 WidthRequest="150"
@@ -55,7 +54,7 @@
             
             <Button 
                 x:Name="peliculas"
-                AbsoluteLayout.LayoutBounds="0, 400, 350, 40"
+                AbsoluteLayout.LayoutBounds="0, 450, 350, 40"
                 Text="Agregar pelicula" 
                 CornerRadius="100" 
                 WidthRequest="135"
@@ -64,8 +63,7 @@
                 Clicked="peliculas_Clicked"/>
 
             <Label Text="Categorias disponibles:" 
-                   AbsoluteLayout.LayoutBounds="0.5, 0.7, 300, 70" 
-                   AbsoluteLayout.LayoutFlags="PositionProportional"  
+                   AbsoluteLayout.LayoutBounds="40, 500, 300, 70" 
                    FontSize="20"
                    TextColor="Purple"
                    FontAttributes="Bold"
@@ -73,13 +71,14 @@
                    VerticalTextAlignment="Center"/>
 
             <ListView 
-                AbsoluteLayout.LayoutBounds="0.5, .92, 300, 150"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds="40, 570, 300, 150"
                 x:Name="CategoriaListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ID}" />
+                                <Label Text="- " />
                                 <Label Text="{Binding Nombre}" />
 
                                 <!-- Agrega más elementos aquí según tus necesidades -->

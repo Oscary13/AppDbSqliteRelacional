@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDbSqliteRelacional.PeliculaPage"
+             Title="Pelicula">
+    <ScrollView>
+        <AbsoluteLayout>
+
+            <Grid 
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3" 
+                AbsoluteLayout.LayoutFlags="All">
+                <Border
+
+                    HeightRequest="230"
+                    WidthRequest="400">
+                    <Border.StrokeShape>
+                        <Rectangle/>
+                    </Border.StrokeShape>
+                    <Image Source="segunda.jpg"/>
+                </Border>
+            </Grid>
+
+            <Label Text="INGRESA UNA PELÍCULA" 
+                   AbsoluteLayout.LayoutBounds="50, 250, 300, 70"
+                   FontSize="24"
+                   TextColor="Red"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+
+            <Border 
+                AbsoluteLayout.LayoutBounds="50, 330, 300, 40">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Entry
+                    x:Name="PeliculaTxt"
+                    Placeholder="Nombre de la pelicula" 
+                    Margin="10,0" 
+                    ClearButtonVisibility="WhileEditing"/>
+            </Border>
+
+            <Border 
+                AbsoluteLayout.LayoutBounds="50, 390, 300, 40">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Entry
+                    x:Name="DuracionTxt"
+                    Placeholder="Duración de la pelicula" 
+                    Margin="10,0" 
+                    ClearButtonVisibility="WhileEditing"/>
+            </Border>
+
+            <Picker 
+                x:Name="pckCategorias"
+                Title="Selecciona una categoriía"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                AbsoluteLayout.LayoutBounds="50, 450, 300, 50"
+                TextColor="Red"
+                FontSize="24"
+                />
+
+            <Button 
+                x:Name="GuardarPelicula"
+                AbsoluteLayout.LayoutBounds="0, 520, 400, 40"
+                Text="Guardar pelicula" 
+                CornerRadius="100" 
+                WidthRequest="300"
+                VerticalOptions="Start"
+                Clicked="GuardarPelicula_Clicked"/>
+
+            <Label Text="Lista de peliculas:" 
+                   AbsoluteLayout.LayoutBounds="50, 580, 300, 70"
+                   FontSize="20"
+                   TextColor="Red"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"/>
+
+            <ListView 
+                AbsoluteLayout.LayoutBounds="40, 650, 300, 150"
+                x:Name="PeliculaListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ID}" />
+                                <Label Text="- " />
+                                <Label Text="{Binding Nombre}" />
+                                <Label Text=": " /><Label Text="{Binding Duracion}" />
+                                <Label Text=" ->"/><Label Text="{Binding NombreCategoria}" />
+                                <!-- Agrega más elementos aquí según tus necesidades -->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </AbsoluteLayout>
+    </ScrollView>
+</ContentPage>

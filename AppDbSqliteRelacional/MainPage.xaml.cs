@@ -42,7 +42,7 @@ public partial class MainPage : ContentPage
 
     private async void peliculas_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Pelicula());
+        await Navigation.PushAsync(new PeliculaPage());
     }
 }
 

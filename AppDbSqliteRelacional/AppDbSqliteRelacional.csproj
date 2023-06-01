@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\pelis.png" />
+	  <None Remove="Resources\Images\segunda.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -57,7 +58,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pelicula.xaml">
+	  <MauiXaml Update="PeliculaPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
