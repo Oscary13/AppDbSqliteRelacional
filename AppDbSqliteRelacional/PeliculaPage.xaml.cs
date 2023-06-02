@@ -20,9 +20,9 @@ public partial class PeliculaPage : ContentPage
     async private void GuardarPelicula_Clicked(object sender, EventArgs e)
     {
         Categoria categoria = (Categoria)pckCategorias.SelectedItem;
-        if (categoria == null )
+        if (categoria == null || PeliculaTxt.Text == "" || PeliculaTxt.Text == null || DuracionTxt.Text == "" || DuracionTxt.Text == null)
         {
-            await DisplayAlert("Categoría", "No has seleccionado una categoría", "Aceptar");
+            await DisplayAlert("Faltan datos", "Debes llenar todos los campos", "Aceptar");
         }
         else
         {
@@ -61,5 +61,15 @@ public partial class PeliculaPage : ContentPage
                            };
 
         PeliculaListView.ItemsSource = consultaLinq;
+    }
+
+    private async void BorratPelicula_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new BorrarPelicula());
+    }
+
+    private async void EditarPeliculas_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new ActualizarPelicula());
     }
 }

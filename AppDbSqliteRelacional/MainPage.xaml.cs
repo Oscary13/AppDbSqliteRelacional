@@ -9,27 +9,36 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-	}
+        var categoria = db.Categoria.ToList();
+        CategoriaListView.ItemsSource = categoria;
 
-    private void GuardarCategoria_Clicked(object sender, EventArgs e)
+
+    }
+
+    async private void GuardarCategoria_Clicked(object sender, EventArgs e)
     {
-        Categoria categoria = new Categoria
+        var dato = CategoriaTxt.Text;
+        if (CategoriaTxt.Text == "" || CategoriaTxt.Text ==  null)
         {
-            Nombre = CategoriaTxt.Text
-        };
+            await DisplayAlert("Categoría", "No has escrito una categoría", "Aceptar");
+        }
+        else
+        {
+            Categoria categoria = new Categoria
+            {
+                Nombre = CategoriaTxt.Text
+            };
 
-        db.Categoria.Add(categoria);
-        db.SaveChangesAsync();
-        OnAppearing();
+            db.Categoria.Add(categoria);
+            db.SaveChanges();
+            OnAppearing();
 
-        CategoriaTxt.Text = "";
-        //var grupos = db.Categorias.ToList();
 
-        //pckGrupos.ItemsSource = grupos;
-        //pckGrupos.ItemDisplayBinding = new Binding("Nombre");
 
-        //var categorias = db.Categorias.ToList();
-        //CategoriaListView.ItemsSource = categorias;
+
+            CategoriaTxt.Text = "";
+        }
+
     }
 
     protected override void OnAppearing()
@@ -40,9 +49,27 @@ public partial class MainPage : ContentPage
         CategoriaListView.ItemsSource = categoria;
     }
 
-    private async void peliculas_Clicked(object sender, EventArgs e)
+    private async void BorratCategoria_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new BorrarCategoria());
+        var categoria = db.Categoria.ToList();
+        CategoriaListView.ItemsSource = categoria;
+    }
+
+    async private void EditarCategoria_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new ActualizarCategoria());
+        var categoria = db.Categoria.ToList();
+        CategoriaListView.ItemsSource = categoria;
+    }
+
+    async private void peliculaVer_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new PeliculaPage());
+        var categoria = db.Categoria.ToList();
+        CategoriaListView.ItemsSource = categoria;
     }
+
+
 }
 

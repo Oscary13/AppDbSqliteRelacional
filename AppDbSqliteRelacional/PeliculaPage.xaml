@@ -4,15 +4,13 @@
              x:Class="AppDbSqliteRelacional.PeliculaPage"
              Title="Pelicula">
     <ScrollView>
-        <AbsoluteLayout>
+        <VerticalStackLayout>
 
-            <Grid 
-                AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3" 
-                AbsoluteLayout.LayoutFlags="All">
+            <Grid>
                 <Border
 
-                    HeightRequest="230"
-                    WidthRequest="400">
+                    HeightRequest="300"
+                    WidthRequest="600">
                     <Border.StrokeShape>
                         <Rectangle/>
                     </Border.StrokeShape>
@@ -20,16 +18,19 @@
                 </Border>
             </Grid>
 
-            <Label Text="INGRESA UNA PELÍCULA" 
-                   AbsoluteLayout.LayoutBounds="50, 250, 300, 70"
+            <Label Text="PELÍCULAS" 
                    FontSize="24"
-                   TextColor="Red"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"/>
+                   VerticalTextAlignment="Center"
+                   Margin="0,80,0,50"/>
 
             <Border 
-                AbsoluteLayout.LayoutBounds="50, 330, 300, 40">
+                x:Name="border1"
+                HeightRequest="40"
+                    WidthRequest="350"
+                 Margin="0,0,0,30"
+                BackgroundColor="White">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="50, 50, 50, 50" />
                 </Border.StrokeShape>
@@ -38,11 +39,16 @@
                     x:Name="PeliculaTxt"
                     Placeholder="Nombre de la pelicula" 
                     Margin="10,0" 
+                    TextColor="Black"
                     ClearButtonVisibility="WhileEditing"/>
             </Border>
 
-            <Border 
-                AbsoluteLayout.LayoutBounds="50, 390, 300, 40">
+            <Border
+                x:Name="border2"
+                HeightRequest="40"
+                    WidthRequest="350"
+                BackgroundColor="White"
+                Margin="0,0,0,30">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="50, 50, 50, 50" />
                 </Border.StrokeShape>
@@ -51,38 +57,80 @@
                     x:Name="DuracionTxt"
                     Placeholder="Duración de la pelicula" 
                     Margin="10,0" 
-                    ClearButtonVisibility="WhileEditing"/>
+                    ClearButtonVisibility="WhileEditing"
+                    TextColor="Black"/>
             </Border>
 
-            <Picker 
-                x:Name="pckCategorias"
-                Title="Selecciona una categoriía"
-                HorizontalOptions="Center"
-                HorizontalTextAlignment="Center"
-                AbsoluteLayout.LayoutBounds="50, 450, 300, 50"
-                TextColor="Red"
-                FontSize="24"
-                />
+            <Border
+                HeightRequest="40"
+                    WidthRequest="350"
+                BackgroundColor="White"
+                Margin="0,0,0,30">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
 
-            <Button 
+                <Picker 
+                x:Name="pckCategorias"
+                HeightRequest="100"
+                    WidthRequest="300"
+                
+                Title="Selecciona una categoría"
+                HorizontalOptions="Center"
+                BackgroundColor="White"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                />
+            </Border>
+
+
+
+
+            <Grid
+                HeightRequest="40"
+                    WidthRequest="350"
+                Margin="20,40,20,0">
+                <Button 
                 x:Name="GuardarPelicula"
-                AbsoluteLayout.LayoutBounds="0, 520, 400, 40"
-                Text="Guardar pelicula" 
+                Text="Guardar" 
                 CornerRadius="100" 
-                WidthRequest="300"
-                VerticalOptions="Start"
-                Clicked="GuardarPelicula_Clicked"/>
+                WidthRequest="100"
+                HorizontalOptions="Start"
+                Clicked="GuardarPelicula_Clicked"
+                    BackgroundColor="Green"
+                    TextColor="White" />
+
+                <Button 
+                x:Name="BorratPelicula"
+                Text="Borrar" 
+                CornerRadius="100" 
+                WidthRequest="105"
+                HorizontalOptions="End"
+                BackgroundColor="Red"
+                    TextColor="White"
+                Clicked="BorratPelicula_Clicked"/>
+
+                <Button 
+                x:Name="EditarPeliculas"
+                Text="Editar" 
+                CornerRadius="100" 
+                WidthRequest="105"
+                HorizontalOptions="Center"
+                BackgroundColor="Blue"
+                    TextColor="White"
+                Clicked="EditarPeliculas_Clicked"/>
+            </Grid>
 
             <Label Text="Lista de peliculas:" 
-                   AbsoluteLayout.LayoutBounds="50, 580, 300, 70"
                    FontSize="20"
-                   TextColor="Red"
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Start"
-                   VerticalTextAlignment="Center"/>
+                   VerticalTextAlignment="Center"
+                   Margin="20,80,20,30"/>
 
             <ListView 
-                AbsoluteLayout.LayoutBounds="40, 650, 300, 150"
+                Margin="20,0,20,30"
                 x:Name="PeliculaListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -92,7 +140,7 @@
                                 <Label Text="- " />
                                 <Label Text="{Binding Nombre}" />
                                 <Label Text=": " /><Label Text="{Binding Duracion}" />
-                                <Label Text=" ->"/><Label Text="{Binding NombreCategoria}" />
+                                <Label Text=" -> "/><Label Text="{Binding NombreCategoria}" />
                                 <!-- Agrega más elementos aquí según tus necesidades -->
                             </StackLayout>
                         </ViewCell>
@@ -100,22 +148,6 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </AbsoluteLayout>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

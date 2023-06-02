@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDbSqliteRelacional.ActualizarCategoria"
+             Title="Actualizar Categoría">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Grid>
+                <Border
+                    HeightRequest="270"
+                    WidthRequest="600">
+                    <Border.StrokeShape>
+                        <Rectangle/>
+                    </Border.StrokeShape>
+                    <Image Source="actualizar.png"/>
+                </Border>
+            </Grid>
+            <Label Text="ACTUALIZA UNA CATEGORÍA DE PELÍCULA"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Margin="0,100,0,50" />
+            <Border
+                x:Name="border1"
+                HeightRequest="40"
+                    WidthRequest="350"
+                BackgroundColor="White"
+                Margin="0,0,0,30">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Picker 
+                x:Name="pckCategorias"
+                HeightRequest="100"
+                    WidthRequest="300"
+                
+                Title="Selecciona una categoría"
+                HorizontalOptions="Center"
+                BackgroundColor="White"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                />
+            </Border>
+
+            <Grid
+                HeightRequest="40"
+                    WidthRequest="350"
+                Margin="20,0,20,0">
+                <Button 
+                x:Name="SeleccionarCategoria"
+                Text="Seleccionar categoría" 
+                CornerRadius="100" 
+                WidthRequest="350"
+                HorizontalOptions="Center"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Clicked="SeleccionarCategoria_Clicked"/>
+
+            </Grid>
+
+            <Border 
+                x:Name="border2"
+                HeightRequest="40"
+                    WidthRequest="350"
+                BackgroundColor="White"
+                Margin="0,0,0,30">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Entry
+                    x:Name="CategoriaTxt"
+                    
+                    Placeholder="Nuevo nombre para la categoría" 
+                    Margin="10,0" 
+                    ClearButtonVisibility="WhileEditing"
+                    TextColor="Black"/>
+            </Border>
+
+            <Grid
+                HeightRequest="40"
+                    WidthRequest="350"
+                Margin="20,0,20,0">
+                <Button 
+                x:Name="Actualizar"
+                Text="Actualizar categoría" 
+                CornerRadius="100" 
+                WidthRequest="350"
+                HorizontalOptions="Center"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    Clicked="ActualizarBtn_Clicked"/>
+
+            </Grid>
+
+            <Label 
+                Text="Categorias disponibles:"
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Center"
+                Margin="20,100,20,30" />
+
+            <ListView 
+                Margin="20,0,20,30"
+                x:Name="CategoriaListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ID}" />
+                                <Label Text="- " />
+                                <Label Text="{Binding Nombre}" />
+
+                                <!-- Agrega más elementos aquí según tus necesidades -->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

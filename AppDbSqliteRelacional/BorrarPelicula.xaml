@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDbSqliteRelacional.BorrarPelicula"
+             Title="BorrarPelicula">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Grid>
+                <Border
+                    HeightRequest="270"
+                    WidthRequest="600">
+                    <Border.StrokeShape>
+                        <Rectangle/>
+                    </Border.StrokeShape>
+                    <Image Source="delete.jpg"/>
+                </Border>
+            </Grid>
+            <Label Text="BORRA UNA PELÍCULA"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Margin="0,100,0,50" />
+            <Border
+                HeightRequest="40"
+                    WidthRequest="350"
+                BackgroundColor="White"
+                Margin="0,0,0,30">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Picker 
+                x:Name="pckPeliculas"
+                HeightRequest="100"
+                    WidthRequest="300"
+                
+                Title="Selecciona una categoría"
+                HorizontalOptions="Center"
+                BackgroundColor="White"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                />
+            </Border>
+
+            <Grid
+                HeightRequest="40"
+                    WidthRequest="350"
+                Margin="20,0,20,0">
+                <Button 
+                x:Name="EliminarCategoria"
+                Text="Eliminar categoría" 
+                CornerRadius="100" 
+                WidthRequest="350"
+                HorizontalOptions="Center"
+                Clicked="EliminarCategoria_Clicked"
+                    BackgroundColor="Blue"
+                    TextColor="White" />
+
+            </Grid>
+
+            <Label 
+                Text="Películas disponibles:"
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Start"
+                VerticalTextAlignment="Center"
+                Margin="20,100,20,30" />
+
+            <ListView 
+                Margin="20,0,20,30"
+                x:Name="PeliculaListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ID}" />
+                                <Label Text="- " />
+                                <Label Text="{Binding Nombre}" />
+                                <Label Text=": " />
+                                <Label Text="{Binding Duracion}" />
+                                <Label Text=" -> "/>
+                                <Label Text="{Binding NombreCategoria}" />
+
+                                <!-- Agrega más elementos aquí según tus necesidades -->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

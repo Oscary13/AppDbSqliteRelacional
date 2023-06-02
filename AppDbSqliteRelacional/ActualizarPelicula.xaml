@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDbSqliteRelacional.ActualizarPelicula"
+             Title="Actualizar película">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Grid>
+                <Border
+                    HeightRequest="300"
+                    WidthRequest="600">
+                    <Border.StrokeShape>
+                        <Rectangle/>
+                    </Border.StrokeShape>
+                    <Image Source="actualizar.png"/>
+                </Border>
+            </Grid>
+
+            <Label Text="ACTUALIZA UNA PELÍCULA" 
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Margin="0,80,0,50"/>
+
+            <Border
+                x:Name="border3"
+                HeightRequest="40"
+                    WidthRequest="350"
+                BackgroundColor="White"
+                Margin="0,0,0,30">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Picker 
+                x:Name="pckPeliculas"
+                HeightRequest="100"
+                    WidthRequest="300"
+                
+                Title="Selecciona una película"
+                HorizontalOptions="Center"
+                BackgroundColor="White"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                />
+            </Border>
+
+            <Grid
+                HeightRequest="40"
+                    WidthRequest="350"
+                Margin="20,0,20,20">
+                <Button 
+                x:Name="SeleccionarPeli"
+                Text="Seleccionar" 
+                CornerRadius="100" 
+                WidthRequest="350"
+                HorizontalOptions="Center"
+                Clicked="SeleccionarPeli_Clicked"
+                    BackgroundColor="Blue"
+                    TextColor="White" />
+
+            </Grid>
+
+            <Border 
+                x:Name="border1"
+                HeightRequest="40"
+                    WidthRequest="350"
+                 Margin="0,0,0,30"
+                BackgroundColor="White">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Entry
+                    x:Name="PeliculaTxt"
+                    Placeholder="Nombre de la pelicula" 
+                    Margin="10,0" 
+                    TextColor="Black"
+                    ClearButtonVisibility="WhileEditing"/>
+            </Border>
+
+            <Border
+                x:Name="border2"
+                HeightRequest="40"
+                    WidthRequest="350"
+                BackgroundColor="White"
+                Margin="0,0,0,30">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Entry
+                    x:Name="DuracionTxt"
+                    Placeholder="Duración de la pelicula" 
+                    Margin="10,0" 
+                    ClearButtonVisibility="WhileEditing"
+                    TextColor="Black"/>
+            </Border>
+
+
+
+            
+
+            <Border
+                x:Name="border4"
+                HeightRequest="40"
+                    WidthRequest="350"
+                BackgroundColor="White"
+                Margin="0,0,0,30">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="50, 50, 50, 50" />
+                </Border.StrokeShape>
+
+                <Picker 
+                x:Name="pckCategorias"
+                HeightRequest="100"
+                    WidthRequest="300"
+                
+                Title="Selecciona una película"
+                HorizontalOptions="Center"
+                BackgroundColor="White"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                FontSize="20"
+                />
+            </Border>
+
+            <Grid
+                HeightRequest="40"
+                    WidthRequest="350"
+                Margin="20,0,20,20">
+                <Button 
+                x:Name="ActualizarPeliculaBtn"
+                Text="Actualizar" 
+                CornerRadius="100" 
+                WidthRequest="350"
+                HorizontalOptions="Center"
+                Clicked="ActualizarPeliculaBtn_Clicked"
+                    BackgroundColor="Blue"
+                    TextColor="White" />
+
+            </Grid>
+
+            <Label Text="Lista de peliculas:" 
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Start"
+                   VerticalTextAlignment="Center"
+                   Margin="20,80,20,30"/>
+
+            <ListView 
+                Margin="20,0,20,30"
+                x:Name="PeliculaListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ID}" />
+                                <Label Text="- " />
+                                <Label Text="{Binding Nombre}" />
+                                <Label Text=": " />
+                                <Label Text="{Binding Duracion}" />
+                                <Label Text=" -> "/>
+                                <Label Text="{Binding NombreCategoria}" />
+                                <!-- Agrega más elementos aquí según tus necesidades -->
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
