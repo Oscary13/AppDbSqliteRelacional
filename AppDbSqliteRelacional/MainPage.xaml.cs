@@ -1,4 +1,5 @@
 ﻿using AppDbSqliteRelacional.Modelos;
+using Microsoft.Maui.Graphics;
 
 namespace AppDbSqliteRelacional;
 
@@ -68,6 +69,11 @@ public partial class MainPage : ContentPage
         await Navigation.PushAsync(new PeliculaPage());
         var categoria = db.Categoria.ToList();
         CategoriaListView.ItemsSource = categoria;
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
     }
 
 
