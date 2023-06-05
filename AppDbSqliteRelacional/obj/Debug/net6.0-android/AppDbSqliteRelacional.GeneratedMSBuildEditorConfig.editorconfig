@@ -8,63 +8,63 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AppDbSqliteRelacional
-build_property.ProjectDir = C:\Users\User\OneDrive\Escritorio\AppDbSqliteRelacional\AppDbSqliteRelacional\
+build_property.ProjectDir = C:\Users\EQUIPO-2\Desktop\AppDbSqliteRelacional\AppDbSqliteRelacional\
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/ActualizarCategoria.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/ActualizarCategoria.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.ActualizarCategoria.xaml
 build_metadata.AdditionalFiles.TargetPath = ActualizarCategoria.xaml
 build_metadata.AdditionalFiles.RelativePath = ActualizarCategoria.xaml
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/ActualizarPelicula.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/ActualizarPelicula.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.ActualizarPelicula.xaml
 build_metadata.AdditionalFiles.TargetPath = ActualizarPelicula.xaml
 build_metadata.AdditionalFiles.RelativePath = ActualizarPelicula.xaml
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/App.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/AppShell.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/BorrarCategoria.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/BorrarCategoria.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.BorrarCategoria.xaml
 build_metadata.AdditionalFiles.TargetPath = BorrarCategoria.xaml
 build_metadata.AdditionalFiles.RelativePath = BorrarCategoria.xaml
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/BorrarPelicula.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/BorrarPelicula.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.BorrarPelicula.xaml
 build_metadata.AdditionalFiles.TargetPath = BorrarPelicula.xaml
 build_metadata.AdditionalFiles.RelativePath = BorrarPelicula.xaml
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/MainPage.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/PeliculaPage.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/PeliculaPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.PeliculaPage.xaml
 build_metadata.AdditionalFiles.TargetPath = PeliculaPage.xaml
 build_metadata.AdditionalFiles.RelativePath = PeliculaPage.xaml
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/Resources/Styles/Colors.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/User/OneDrive/Escritorio/AppDbSqliteRelacional/AppDbSqliteRelacional/Resources/Styles/Styles.xaml]
+[C:/Users/EQUIPO-2/Desktop/AppDbSqliteRelacional/AppDbSqliteRelacional/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppDbSqliteRelacional.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
