@@ -35,7 +35,8 @@ public partial class MainPage : ContentPage
             OnAppearing();
 
 
-
+            var categoriass = db.Categoria.ToList();
+            CategoriaListView.ItemsSource = categoriass;
 
             CategoriaTxt.Text = "";
         }
